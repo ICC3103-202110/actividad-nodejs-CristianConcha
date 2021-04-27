@@ -10,4 +10,18 @@ function fibonacci(num) {
 
 }
 
-console.log(fibonacci(5))
+const terminal = require('readline');
+
+const Console = terminal.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+
+Console.question("\nEnter a number ", (number) => {
+
+       console.log("F("+number+") = " + fibonacci(number))
+        Console.close();
+    });
+
+
